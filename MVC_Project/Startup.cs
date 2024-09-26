@@ -1,15 +1,18 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MVC_Project.BLL.Interfacies;
 using MVC_Project.DAL.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MVC_Project.BLL.Repositores;
 
 namespace MVC_Project
 {
@@ -26,21 +29,19 @@ namespace MVC_Project
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 
             //services.AddSingleton<AppDbContext>(); //Per Apllication
             //services.AddScoped<AppDbContext>();  //Per Request
             //services.AddTransient<AppDbContext>();  //Per Operation
             services.AddDbContext<AppDbContext>(option =>
             {
-
-                // Go AppSetting Connectiong String 
                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-
-
-            }); //Default ==> Scoped
+            });
+            //Default ==> Scoped
+            //services.AddScoped<IDepartmentRepository, IDepartmentRepository>();
 
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

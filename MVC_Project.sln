@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Project.PL", "MVC_Project\MVC_Project.PL.csproj", "{63BB9DF0-5BCB-40F9-9EA3-C1D42899B8F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Project.PL", "MVC_Project\MVC_Project.PL.csproj", "{63BB9DF0-5BCB-40F9-9EA3-C1D42899B8F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Project.DAL", "MVC_Project.DAL\MVC_Project.DAL.csproj", "{81F8965B-5A00-4109-9AE9-0B7084375DD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Project.DAL", "MVC_Project.DAL\MVC_Project.DAL.csproj", "{81F8965B-5A00-4109-9AE9-0B7084375DD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Project.BLL", "MVC_Project.BLL\MVC_Project.BLL.csproj", "{27F70F07-DC42-44D9-8DC5-B6F0AB71103D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Project.BLL", "MVC_Project.BLL\MVC_Project.BLL.csproj", "{27F70F07-DC42-44D9-8DC5-B6F0AB71103D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
